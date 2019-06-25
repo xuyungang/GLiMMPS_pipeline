@@ -78,6 +78,6 @@ The sQTL analysis can be performed for each chromosome using script in **/GLiMMP
 **Outputs:**
   
  Two folders:
-  - **parallel.tmpasso/** includes all associations, one file per AS event; one subfolder per chromosome; and one PDF per AS event that has at least one significant sQTL. This the main results of sQTLs
+  - **parallel.tmpasso/** includes all associations, one file per AS event; one subfolder per chromosome; and one PDF per AS event that has at least one significant sQTL. These are the main results of sQTLs.
   - **parallel.tmpgeno/** includes all tempory files used by the statistical analysis. For debugging only.
 
