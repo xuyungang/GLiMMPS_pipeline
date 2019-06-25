@@ -1,4 +1,4 @@
-# GLiMMPs_pipeline
+# GLiMMPS_pipeline
 This repository contains the source codes of the pipeline for sQTL mapping and illustrates the usage by performing an example analysis on the data of Gevadis CEU population.
 ## Table of Contents
 - [1. Prerequisites](#1)
