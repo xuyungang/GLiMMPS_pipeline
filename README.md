@@ -32,4 +32,24 @@ fastq files will be downloaded and grouped into different folders named as the p
 
 Customize the config.GLiMMPS.txt for the population, which contains main parapeters for all data processing.
 
-  ```/GLiMMPscode/pythonperlsrcs/batch_allASevents.pl /GLiMMPscode/config.GLiMMPS.txt```
+  ```./GLiMMPscode/pythonperlsrcs/batch_allASevents.pl /GLiMMPscode/config.GLiMMPS.txt```
+
+The above code will produce a job file named **submit_ASevents**, which has the commend line to run `/GLiMMPScode/pythonperlsrcs/processGTF.SAMs.py` on the given population data. You can run it directly or submit this file to a HPC.
+
+The resulting AS events will be outputted in **/ASEvents/**.
+**(2) Get junction read count for all individuals**: 
+
+run the following code to get the job file and configure files:
+```./GLiMMPscode/pythonperlsrcs/batch_getASreads.pl /GLiMMPscode/config.GLiMMPS.txt```
+The above code will produce a folder named **tempconfig/**, which has the configurations to run embeded rMATs code for each individual of the given population data. 
+
+The above code will also produce a job file named **submit_ASreadcounts**, which has the commend lines to run `/GLiMMPScode/pythonperlsrcs/rMATS.processsUnique.singlesam.py` for each individual. You can run it one by one directly or submit this file to a HPC to run parallelly.
+
+After all above jobs were done, the resulted junction read counts for all 4 types of AS events per individual will be output in **myOutput/**. Then run the following code to sumerize the read counts across individuals:
+```./GLiMMPscode/pythonperlsrcs/summarizeallexoninc.pl /GLiMMPscode/config.GLiMMPS.txt```
+The above code will put the summerized read counts into **Exon_Inc_Simple/AScounts/**. 
+
+Finally run the following code to filter the AS events so that the PSI range > 0.1 and media.n >= 5.
+```cd Exon_Inc_Simple
+./GLiMMPScode/Rscripts/summarystat_exonmin5.R
+```
