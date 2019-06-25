@@ -50,9 +50,13 @@ After all above jobs were done, the resulted junction read counts for all 4 type
 ```./GLiMMPscode/pythonperlsrcs/summarizeallexoninc.pl /GLiMMPscode/config.GLiMMPS.txt```
 The above code will put the summerized read counts into **Exon_Inc_Simple/AScounts/**. 
 
-**(3) Fiter the AS events**: 
+**(3) Filter the AS events**: 
 Finally run the following code to filter the AS events so that the PSI range > 0.1 and media.n >= 5.
 ```
 cd Exon_Inc_Simple
 ./GLiMMPScode/Rscripts/summarystat_exonmin5.R
 ```
+The above code will produce files in **Exon_Inc_Simple/alltype/**, which will be used as input for statictical models.
+
+### 3.2 Run statistical models for sQTLs
+After above step, we have the AS exon information, the inclusion junction and total junction read counts matrix for all individuals (in **Exon_Inc_Simple/alltype/**), as well ase the plink-format genotype files (in **SNPs_plink/**). 
