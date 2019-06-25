@@ -100,6 +100,8 @@ The sQTL analysis can be performed for each chromosome using script in **/GLiMMP
   - **parallel.tmpgeno/** includes all tempory files used by the statistical analysis. For debugging only.
 
 ## <a name="4"></a>Contacts
+Yi Xing (Yi.Xing@pennmedicine.upenn.edu)
 Yungang Xu (yungang.xu@hotmail.com)
 
 ## <a name="5"></a>Citation
+\[1\]Zhao, K., Lu, Z. X., Park, J. W., Zhou, Q., & Xing, Y. (2013). GLiMMPS: robust statistical model for regulatory variation of alternative splicing using RNA-seq data. Genome biology, 14(7), R74.
