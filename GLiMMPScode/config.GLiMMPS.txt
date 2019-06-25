@@ -1,0 +1,40 @@
+##################################
+# This is the main configuration file that specify the parameters needed for data proceessing
+#
+##################################
+# Input file listing all the individual IDs in the population, which is used in all downstream analysis
+IDFILE = CheungCEU_IDs.txt
+
+## sam folder path (before the individual folder ).
+SAMPATH = /intern/xinglabScratch/zhaok/sQTL/CheungCEU/
+## uniquely mapped sequence sam file name under the directory of each individual ID.
+SAMFILE = unique.sam
+
+## The 3 parameters combination specify the bam file of each individual with id $ID in the IDFILE.
+## $SAMPATH/$ID/$SAMFILE
+
+### readLength
+READLENGTH =50
+
+####################################
+### junctionLength: it can be calculated as 
+###   junctionLength = 2*(readLength-anchorLength)
+#
+### For example, if your readLength is 50 and you ran tophat with -a/--min-anchor-length 8
+### junction length becomes 2*(50-8) = 84
+
+JUNCTIONLENGTH = 84
+
+ 
+## Path to the misc python perl scripts
+SCRIPTDIR = ~/Research/sQTL/GLiMMPScode/pythonperlsrcs
+
+## annotation file in gtf format
+ANNOTATIONFILE = ~/Research/sQTL/GLiMMPScode/reference/Ensembl_r65.gtf
+
+## short project title used to create filenames. To avoid errors,  make it short and no space or special characters.
+PROJECTTITLE = CEU
+
+## Path to plink command (optional, only necessary when plink is not in your $PATH environmental variable.)
+PLINKDIR = ~/bin/
+
