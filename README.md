@@ -62,3 +62,8 @@ The above code will produce files in **Exon_Inc_Simple/alltype/**, which will be
 After above step, we have the AS exon information, the inclusion junction and total junction read counts matrix for all individuals (in **Exon_Inc_Simple/alltype/**), as well ase the plink-format genotype files (in **SNPs_plink/**).
 
 The sQTL analysis can be performed for each chromosome using script in **/GLiMMPScode/run.GLiMMPS.parallel.sh**.
+
+**Parameters/arguments for this script:**
+
+..* chr_id <INT>, the chromosome to be analyzed, number only without 'chr', i.e. {1..22}
+  
