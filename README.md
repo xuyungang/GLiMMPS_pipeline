@@ -50,6 +50,7 @@ After all above jobs were done, the resulted junction read counts for all 4 type
 The above code will put the summerized read counts into **Exon_Inc_Simple/AScounts/**. 
 
 Finally run the following code to filter the AS events so that the PSI range > 0.1 and media.n >= 5.
-```cd Exon_Inc_Simple
+```
+cd Exon_Inc_Simple
 ./GLiMMPScode/Rscripts/summarystat_exonmin5.R
 ```
