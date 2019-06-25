@@ -19,4 +19,4 @@ doMerge(){
 while read -r line
 do
   doMerge $line
-done
+done < $1
