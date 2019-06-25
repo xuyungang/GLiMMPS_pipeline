@@ -42,9 +42,14 @@ exonindex = as.numeric(args[5])
 
 pval.cutoff<-  10^(-5) ## default pvalue cutoff for signfiance of GLiMMPS
 maf.cutoff <- 0.05
-#if(length(args) >=6 ){
-#pval.cutoff<-   as.numeric(args[6])
-#}
+n.cores <- 100 ## the number of threads for parallel running
+if(length(args) >=6 ){
+n.cores <-   as.numeric(args[6])
+if(!is.numeric(n.cores)){
+   cat("Warning: the input for threads number is not a valid number; set to defualt (100);")
+    n.cores <- 100
+}
+}
 if(length(args) >=6 ){
 maf.cutoff <- as.numeric(args[6])
 }
@@ -213,13 +218,13 @@ doFit <- function(gi){
   ### data association
   SNP = geno[,gi]
   snp.maf <- maf(SNP)
+# disabled the MAF filtering
 #  if( snp.maf < maf.cutoff){
 #    currentN <- nSkipped
 #    nSkipped <- currentN+1
 #    cat(paste(" SNP", colnames(geno)[gi], "has same genotype across individuals. Skipped (",nSkipped,")!\n"))
 #    return(c(NA, NA, NA, NA, NA, NA, snp.maf))
 #  }
-#    print(SNP)
   onedata <- list(n=n,y=y, SNP=SNP)
 
   results.glm <- glm.sQTL ( onedata )
@@ -247,7 +252,7 @@ doFit <- function(gi){
   }
   return(c(results.glm$pval,results.quasi$pval,results.glmm$pval, results.lm$pval, glmmWald.pvals, results.glmm$betas[2],snp.maf))
  }
-pvals <- mclapply(1:nsnps, doFit, mc.cores = 100)
+pvals <- mclapply(1:nsnps, doFit, mc.cores = n.cores)
 pvals.matrix <- do.call(rbind, pvals)
 
 #cat(paste(nSkipped,"SNPs","have the MAFs less than the cutoff",maf.cutoff," Skipped!\n"))
