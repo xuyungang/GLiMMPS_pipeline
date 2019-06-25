@@ -23,4 +23,9 @@ fastq files will be downloaded and grouped into different folders named as the p
 
 **(3) Alignment using STAR**: run `mapSTAR.sh <Individual_ID>` to map the reads to hg19 genome and get the uniquely mapped reads. The unique.sam files will be in *sam_unique/* with the subfolder named with the <Individual_ID>.
 ## 3. Run GLiMMPs pipeline
+### 3.1 Obtai the junction read counts for all possible alternative splicing events in the population
+**(1) Get all possible alternative splicing (AS) events in the population.
 
+  ```/GLiMMPscode/pythonperlsrcs/batch_allASevents.pl /GLiMMPscode/config.GLiMMPS.txt```
+  
+  
