@@ -4,21 +4,21 @@
 ##################################
 ## short project title used to create filenames. To avoid errors,  make it short and no space or special characters.
 PROJECTTITLE = CEU
-###################################
+##################################
 ## Input file listing all the individual IDs in the population, which is used in all downstream analysis
 IDFILE = /path/to/CEU.samples.txt
-###################################
+##################################
 ## sam folder path (before the individual folder ).
 SAMPATH = /path/to/sam_unique/
+##################################
 ## uniquely mapped sequence sam file name under the directory of each individual ID.
 SAMFILE = unique.sam
-###################################
 ## The 3 parameters combination specify the bam file of each individual with id $ID in the IDFILE.
 ## $SAMPATH/$ID/$SAMFILE
-###################################
+##################################
 ### readLength
 READLENGTH =75
-####################################
+###################################
 ### junctionLength: it can be calculated as 
 ###   junctionLength = 2*(readLength-anchorLength)
 #
