@@ -37,6 +37,7 @@ Customize the config.GLiMMPS.txt for the population, which contains main parapet
 The above code will produce a job file named **submit_ASevents**, which has the commend line to run `/GLiMMPScode/pythonperlsrcs/processGTF.SAMs.py` on the given population data. You can run it directly or submit this file to a HPC.
 
 The resulting AS events will be outputted in **/ASEvents/**.
+
 **(2) Get junction read count for all individuals**: 
 
 run the following code to get the job file and configure files:
@@ -49,6 +50,7 @@ After all above jobs were done, the resulted junction read counts for all 4 type
 ```./GLiMMPscode/pythonperlsrcs/summarizeallexoninc.pl /GLiMMPscode/config.GLiMMPS.txt```
 The above code will put the summerized read counts into **Exon_Inc_Simple/AScounts/**. 
 
+**(3) Fiter the AS events**: 
 Finally run the following code to filter the AS events so that the PSI range > 0.1 and media.n >= 5.
 ```
 cd Exon_Inc_Simple
