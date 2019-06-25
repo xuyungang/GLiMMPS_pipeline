@@ -65,5 +65,5 @@ The sQTL analysis can be performed for each chromosome using script in **/GLiMMP
 
 **Parameters/arguments for this script:**
 
-- chr_id <INT>, the chromosome to be analyzed, number only without 'chr', i.e. {1..22}
+- chr_id \<INT\>, the chromosome to be analyzed, number only without 'chr', i.e. {1..22}
   
