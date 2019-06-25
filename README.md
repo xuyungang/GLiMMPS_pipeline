@@ -33,7 +33,7 @@ Refer to [plink](http://zzz.bwh.harvard.edu/plink/download.shtml) page for detai
 
 **(2) Batch download**: use `fastqDownloader.sh` to downlaod the samples you need. Take CEU population as example, first take out those lines for CEU from *igsr_Geuvadis.tsv.tsv*, you can run `grep "CEU" igsr_Geuvadis.tsv.tsv >> CEU_igsr_Geuvadis.tsv.tsv`; 
 
-then run `bash fastqDownloader.sh CEU_igsr_Geuvadis.tsv.tsv 50` to download the fastq files for samples included in **CEU_igsr_Geuvadis.tsv.tsv** with 50 threads parallelly.
+then run `bash fastqDownloader.sh CEU_igsr_Geuvadis.tsv.tsv 50` to download the fastq files for samples included in *CEU_igsr_Geuvadis.tsv.tsv* with 50 threads parallelly.
 
 fastq files will be downloaded and grouped into different folders named as the population ID, like CEU etc. All fastq files will also be renamed as <Idividual_ID>\_<Sample_ID>\_1.fastq.gz, like NA06984_ERR188325_1.fastq.gz.
 
