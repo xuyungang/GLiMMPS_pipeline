@@ -24,6 +24,7 @@ fastq files will be downloaded and grouped into different folders named as the p
 **(3) Alignment using STAR**: run `mapSTAR.sh <Individual_ID>` to map the reads to hg19 genome and get the uniquely mapped reads. The unique.sam files will be in *sam_unique/* with the subfolder named with the <Individual_ID>.
 ### 2.3 Genotypes (vcf files) download and processin
 **(1) Download vcf files**: run `vcfDownloader.sh` to download the vcf files from 1000 Genome.
+
 **(2) convert the vcf files to .tped and .tmap**: The downstream sQTL analysis will use genotypes from `plink` formatted files with each chromosome in one file. Run `vcf2plink.sh` to get the formatted files from vcf files. 
 ## 3. Run GLiMMPs pipeline
 ### 3.1 Obtai the junction read counts for all possible alternative splicing events in the population
