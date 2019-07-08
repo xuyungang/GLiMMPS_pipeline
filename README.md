@@ -29,6 +29,7 @@ Refer to [vcftools](https://vcftools.github.io/examples.html) page for detailed 
 Refer to [plink](http://zzz.bwh.harvard.edu/plink/download.shtml) page for detailed instructions.
 
 ## <a name="2"></a>2. Data download and processing (Geuvadis as example)
+All shell scripts (.sh files) mentioned hereafter are located in the folder *data_download_process/*.
 ### <a name="2.1"></a>2.1 RNA-seq data download and processing
 **(1) Download metadata** (sample list): Go to Geuvadis [Dataport](http://www.internationalgenome.org/data-portal/data-collection/geuvadis), select the *Data types* as `Sequence` and the *Analysis groups* as `mRNA`, and then click `Download the list` button to get the metadata (*igsr_Geuvadis.tsv.tsv*) of all five Geuvadis populations (CEU, FIN, GBR, TSI, and YRI).
 
