@@ -1,7 +1,7 @@
 #!/bin/bash
 ##
-## Align the reads from pairwise fastq files to hg19 genmoe using STAR
-## Get the uniquely mapped reads
+## Align the reads from pairwise fastq files to hg19 genmoe using STAR and
+## get the uniquely mapped reads
 ## Author: Yungang Xu (yungang.xu@hotmail.com)
 ##----------Arguments----------
 ## $1 the individual id, which is used to find the pairwise fastq files for mapping
