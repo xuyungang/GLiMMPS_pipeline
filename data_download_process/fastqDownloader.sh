@@ -5,7 +5,7 @@
 ## $1 the metadata (sample list) downloaded from http://www.internationalgenome.org/data-portal/data-collection/geuvadis
 ## remove the header line before use it
 ## $2 a number indicating the parallel threads for multiple downloading simultaneously. Based on my experience,
-##    the above server could afford upto 70 threads, otherwise will get some download failed becasue of the connection trafic.
+##    the above server could afford upto 70 threads, otherwise will get some download failed because of the connection traffic.
 ##----------USAGE----------
 ## [qsub -cwd -l h_vmem=120G,m_mem_free=60G -M xuy5@email.chop.edu -m bea] fastqDownloader.sh igsr_Geuvadis.tsv.tsv 20
 
