@@ -106,6 +106,7 @@ The sQTL analysis can be performed for each chromosome using script in **/GLiMMP
 
 ## <a name="4"></a>Contacts
 Yi Xing (Yi.Xing@pennmedicine.upenn.edu)
+
 Yungang Xu (yungang.xu@hotmail.com)
 
 ## <a name="5"></a>Citation
