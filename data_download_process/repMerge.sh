@@ -5,7 +5,7 @@
 ## $1 individual list file, one ID per line.
 ##----------Usgae----------
 ## bash repMerge.sh CEU.samples.txt
-## Output: <Individual_ID>_1.fq.gz
+## Output: merged/<Individual_ID>_1.fq.gz and merged/<Individual_ID>_2.fq.gz for each individual with ID <Individual_ID>.
 
 doMerge(){
   fq1=`ls $1*_1*`
