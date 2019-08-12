@@ -42,7 +42,7 @@ fastq files will be downloaded and grouped into different folders named as the p
 ### <a name="2.2"></a>2.2 QC and alignment
 **(1) QC**: we ran trim_galore on the pairwise fastq files (set --paired) to make sure all reads have the same length of 75bp; and then run fastqc for QC filtering.
 
-**(2) Merge replicates for single individual**: after trim and QC, many of the idviduals will have more than one replicates, we merged the fastq files of replicates, so that each individual will have only one pair fastq files, named as <Individual_ID>\_1.fq.gz and <Individual_ID>\_2.fq.gz. In total, for CEU population, there will be 184 fastq files for 92 individuals.
+**(2) Merge replicates for single individual**: after trim and QC, many of the individuals will have more than one replicates, we merged the fastq files of replicates, so that each individual will have only one pair fastq files, named as <Individual_ID>\_1.fq.gz and <Individual_ID>\_2.fq.gz. In total, for CEU population, there will be 184 fastq files for 92 individuals.
 
 **(3) Alignment using STAR**: run `mapSTAR.sh <Individual_ID>` to map the reads to hg19 genome and get the uniquely mapped reads. The unique.sam files will be in *sam_unique/* with the subfolder named with the <Individual_ID>.
 ### <a name="2.3"></a>2.3 Genotypes (vcf files) download and processin
