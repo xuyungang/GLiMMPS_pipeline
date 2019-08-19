@@ -51,7 +51,7 @@ fastq files will be downloaded and grouped into different folders named as the p
 **(2) convert the vcf files to .tped and .tmap**: The downstream sQTL analysis will use genotypes from `plink` formatted files with each chromosome in one file. Run `vcf2plink.sh` to get the formatted files from vcf files. Output files will be in **SNPs_plink/**.
 
 ## <a name="3"></a>3. Run GLiMMPs pipeline
-### <a name="3.2"></a>3.1 Obtain the junction read counts for all possible alternative splicing events in the population
+### <a name="3.1"></a>3.1 Obtain the junction read counts for all possible alternative splicing events in the population
 **(1) Get all possible alternative splicing (AS) events in the population.**
 
 Customize the config.GLiMMPS.txt for the population, which contains main parapeters for all data processing.
